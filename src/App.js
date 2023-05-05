@@ -1,10 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import { useState } from 'react';
+import BookCreate from './components/BookCreate';
 
 function App ()
 {
+  const [books, setBooks] = useState([]);
+
+  const createBook = (title) =>
+  {
+    console.log(title);
+  };
+
   return (
-    <div>App</div>
+    <div>
+      <BookCreate onCreate={createBook} />
+    </div>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
